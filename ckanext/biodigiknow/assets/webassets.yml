@@ -1,0 +1,14 @@
+# biodigiknow-js:
+#   filter: rjsmin
+#   output: ckanext-biodigiknow/%(version)s-biodigiknow.js
+#   contents:
+#     - js/biodigiknow.js
+#   extra:
+#     preload:
+#       - base/main
+
+# biodigiknow-css:
+#   filter: cssrewrite
+#   output: ckanext-biodigiknow/%(version)s-biodigiknow.css
+#   contents:
+#     - css/biodigiknow.css
