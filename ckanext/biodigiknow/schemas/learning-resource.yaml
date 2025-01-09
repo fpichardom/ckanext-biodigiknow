@@ -130,7 +130,7 @@ dataset_fields:
   label: Category
   preset: select
   display_property: schema:category
-   choices:
+  choices:
   - value: workshop
     label: Workshop
   - value: course
