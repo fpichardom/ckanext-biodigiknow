@@ -206,7 +206,22 @@ dataset_fields:
 - field_name: discipline
   label: Discipline
   preset: multiple_select
-  display_property: ltc:discipline 
+  display_property: ltc:discipline
+  choices:
+  - value: botany
+  - label: Botany
+  - value: botany - seed plants
+  - label: Botany - Seed Plants
+  - value: entomology
+  - label: Entomology
+  - value: paleontology
+  - label: Paleontology
+  - value: zoology - vertebrates
+  - label: Zoology - Vertebrates
+  - value: ornithology
+  - label: Ornithology
+  - value: ichthyology
+  - label: Ichthyology
 
 
 resource_fields:
