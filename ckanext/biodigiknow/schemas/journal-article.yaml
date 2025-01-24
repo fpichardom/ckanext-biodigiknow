@@ -1,13 +1,19 @@
 scheming_version: 2
 dataset_type: journal-article
-about: A reimplementation of the CKAN dataset schema for journal articles
+about: A reimplementation of the CKAN dataset schema for scholarly articles
 about_url: https://github.com/fpichardom/ckan_modified_schemas
 
 
 dataset_fields:
 
 # our id + name fields are uuids and always equal
-- preset: biodigiknow_dataset_id
+
+#- preset: biodigiknow_dataset_id
+- field_name: id
+  label: ID
+  preset: biodigiknow_dataset_id
+  label: ID
+
 - preset: biodigiknow_dataset_name
 
 - field_name: title
@@ -51,7 +57,13 @@ dataset_fields:
 - field_name: journal
   label: Journal
   required: True
-  display_property: schema:publishedBy
+  form_placeholder: Philosophical Transactions of the Royal Society B Biological Sciences
+  display_property: schema:publisher
+
+- field_name: journal_abbreviation
+  label: Journal Abbreviation
+  form_placeholder: Phil. Trans. R. Soc. B
+  display_property: schema:publisher
 
 - field_name: volume
   label: Volume
@@ -62,11 +74,11 @@ dataset_fields:
   label: Issue
   display_property: schema:issueNumber
 
-- field_name: year_published
-  label: Year
-  validators: int_validator
-  form_placeholder: e.g. 1998
+- field_name: date_published
+  label: Date Published
+  preset: date
   display_property: schema:datePublished
+  help_text: If the publication has only year then use the first of January as filler (eg., 01-01-2025)
 
 - field_name: pages
   label: pages
@@ -149,19 +161,19 @@ dataset_fields:
   display_property: ltc:discipline
   choices:
   - value: botany
-  - label: Botany
+    label: Botany
   - value: botany - seed plants
-  - label: Botany - Seed Plants
+    label: Botany - Seed Plants
   - value: entomology
-  - label: Entomology
+    label: Entomology
   - value: paleontology
-  - label: Paleontology
+    label: Paleontology
   - value: zoology - vertebrates
-  - label: Zoology - Vertebrates
+    label: Zoology - Vertebrates
   - value: ornithology
-  - label: Ornithology
+    label: Ornithology
   - value: ichthyology
-  - label: Ichthyology
+    label: Ichthyology
 
 - field_name: owner_org
   label: Organization

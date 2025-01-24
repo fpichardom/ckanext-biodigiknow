@@ -7,7 +7,11 @@ about_url: https://github.com/fpichardom/ckan_modified_schemas
 dataset_fields:
 
 # our id + name fields are uuids and always equal
-- preset: biodigiknow_dataset_id
+- field_name: id
+  label: ID
+  preset: biodigiknow_dataset_id
+  label: ID
+
 - preset: biodigiknow_dataset_name
 
 - field_name: title
